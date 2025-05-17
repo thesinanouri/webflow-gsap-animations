@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.from(el, {
                     x: 100,
                     opacity: 0,
-                    duration: 1.2,
+                    duration: 8,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.from(el, {
                     scale: 0.5,
                     opacity: 0,
-                    duration: 1,
+                    duration: 8,
                     ease: "elastic.out(1, 0.5)",
                     scrollTrigger: {
                         trigger: el,
