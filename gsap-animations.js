@@ -1,18 +1,54 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-gsap]").forEach((el) => {
-    const type = el.getAttribute("data-gsap");
+    gsap.registerPlugin(ScrollTrigger);
 
-    switch (type) {
-      case "fade-in":
-        gsap.from(el, { opacity: 0, duration: 1 });
-        break;
+    // Select all elements that have the "data-gsap" attribute
+    document.querySelectorAll("[data-gsap]").forEach((el) => {
+        const animationType = el.getAttribute("data-gsap");
 
-      case "slide-up":
-        gsap.from(el, { y: 100, opacity: 0, duration: 1 });
-        break;
+        switch (animationType) {
+            case "fade-in":
+                gsap.from(el, {
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                break;
 
-      default:
-        console.warn(`No GSAP animation defined for "${type}"`);
-    }
-  });
+            case "slide-left":
+                gsap.from(el, {
+                    x: 100,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                break;
+
+            case "scale-up":
+                gsap.from(el, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                break;
+
+            default:
+                console.warn(`No animation found for ${animationType}`);
+        }
+    });
 });
