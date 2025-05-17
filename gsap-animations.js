@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             case "fade-in":
                 gsap.from(el, {
                     opacity: 0,
-                    duration: 5,
+                    duration: 1,
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: el,
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             case "slide-left":
                 gsap.from(el, {
-                    x: 100,
+                    x: 120,
                     opacity: 0,
-                    duration: 8,
+                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.from(el, {
                     scale: 0.5,
                     opacity: 0,
-                    duration: 8,
+                    duration: 1,
                     ease: "elastic.out(1, 0.5)",
                     scrollTrigger: {
                         trigger: el,
