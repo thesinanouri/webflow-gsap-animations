@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 85%",
+                        start: "top 80%",
                         toggleActions: "play none none none"
                     }
                 });
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ease: "elastic.out(1, 0.5)",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 90%",
+                        start: "top 80%",
                         toggleActions: "play none none none"
                     }
                 });
