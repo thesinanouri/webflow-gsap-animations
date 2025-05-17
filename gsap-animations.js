@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             case "fade-in":
                 gsap.from(el, {
                     opacity: 0,
-                    duration: 1,
+                    duration: 5,
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: el,
